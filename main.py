@@ -32,6 +32,8 @@ def main():
 
         updatable.update(dt)
 
+        player.shoot_cooldown_timer -= dt
+
         for asteroid in asteroids:
             if asteroid.collision(player):
                 print("Game over!")
